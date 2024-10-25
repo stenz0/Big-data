@@ -1,0 +1,13 @@
+Cose utili di questo lab:
+
+- Map only job: Non tutti i mapper hanno sempre un reducer; più nello specifico:
+
+	1. Un mapper prende i dati da un file di input e li organizza; prende automaticamente in input una riga alla volta del file, quindi noi dobbiamo preoccuparci solo di gestire i dati 	riga per riga e scrivere l'output;
+
+	2. Un mapper dunque organizza i dati e li ha in uscita nel formato (chiave, valore) dove le chiavi non devono essere per forza univoche (possono esserlo come non esserlo);
+
+	3. Un reducer ha in input i dati nel formato (chiaveA, [valore1A, valore2A...]), dove la lista è la lista dei valori associati a quella chiave (quindi nel mapper avevamo (chiaveA, 	valore1A), (chiaveA, valore2A) nei valori in output del mapper, e questa lista è generata automaticamente nel passaggio tra mapper e reducer;
+
+	4. Quando le chiavi del mapper sono già univoche siamo di fronte ad un map only job, ovvero un lavoro dove non c'è nessun reducer;
+
+- Filtro: per filtrare le parole in base ai caratteri iniziali è consigliato l'uso di "startsWith()" usato così: stringa.startsWith("a") (che vale true solo se la stringa inizia per a);
