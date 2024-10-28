@@ -1,0 +1,3 @@
+Errori tipici:
+  1. Non cambiare i parametri nel driver (avevo fatto copia e incolla dal primo es, ma quello era map only job, questo... no)
+  2. Non cambiare i parametri passati nella linea di comando (passavo 0 come numero di reducer...)
